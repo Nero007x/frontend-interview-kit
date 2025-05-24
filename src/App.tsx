@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom'
+import DebounceDemo from './components/DebounceDemo'
 
 function App() {
   return (
@@ -35,7 +36,17 @@ function App() {
       <main className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/javascript/*" element={<div>JavaScript Section</div>} />
+          <Route path="/javascript/*" element={
+            <div className="space-y-8">
+              <h1 className="text-3xl font-bold mb-6">JavaScript Concepts</h1>
+              <div className="space-y-12">
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4">Common Patterns</h2>
+                  <DebounceDemo />
+                </section>
+              </div>
+            </div>
+          } />
           <Route path="/html/*" element={<div>HTML Section</div>} />
           <Route path="/css/*" element={<div>CSS Section</div>} />
           <Route path="/react/*" element={<div>React Section</div>} />
