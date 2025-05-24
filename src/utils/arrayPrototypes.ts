@@ -11,6 +11,10 @@ declare global {
       callback: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U,
       initialValue?: U
     ): U;
+    myFilter(
+      callback: (value: T, index: number, array: T[]) => boolean,
+      thisArg?: any
+    ): T[];
   }
 }
 
