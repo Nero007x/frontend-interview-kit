@@ -1,6 +1,7 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import DebounceDemo from './components/DebounceDemo'
 import ArrayReduceDemo from './components/ArrayReduceDemo'
+import ArrayFilterDemo from './components/ArrayFilterDemo'
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
                 <section>
                   <h2 className="text-2xl font-semibold mb-4">Array Methods</h2>
                   <ArrayReduceDemo />
+                  <div className="mt-8">
+                    <ArrayFilterDemo />
+                  </div>
                 </section>
               </div>
             </div>
