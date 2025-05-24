@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom'
 import DebounceDemo from './components/DebounceDemo'
+import ArrayReduceDemo from './components/ArrayReduceDemo'
 
 function App() {
   return (
@@ -43,6 +44,10 @@ function App() {
                 <section>
                   <h2 className="text-2xl font-semibold mb-4">Common Patterns</h2>
                   <DebounceDemo />
+                </section>
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4">Array Methods</h2>
+                  <ArrayReduceDemo />
                 </section>
               </div>
             </div>
