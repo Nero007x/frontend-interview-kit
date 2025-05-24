@@ -3,6 +3,7 @@ import DebounceDemo from './components/DebounceDemo'
 import ArrayReduceDemo from './components/ArrayReduceDemo'
 import ArrayFilterDemo from './components/ArrayFilterDemo'
 import JsonStringifyDemo from './components/JsonStringifyDemo'
+import PromiseAllDemo from './components/PromiseAllDemo'
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
                 </Link>
                 <Link to="/javascript" className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300">
                   JavaScript
+                </Link>
+                <Link to="/javascript/promise-all" className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300">
+                  Promise.all
                 </Link>
                 <Link to="/html" className="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-transparent hover:border-gray-300">
                   HTML
@@ -57,6 +61,10 @@ function App() {
                 <section>
                   <h2 className="text-2xl font-semibold mb-4">JSON Methods</h2>
                   <JsonStringifyDemo />
+                </section>
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4">Promise.all</h2>
+                  <PromiseAllDemo />
                 </section>
               </div>
             </div>
