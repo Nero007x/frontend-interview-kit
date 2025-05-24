@@ -1,10 +1,8 @@
 /**
- * Custom implementation of Array.prototype.reduce
+ * Custom implementation of Array.prototype.reduce and Array.prototype.filter
  * @template T, U
- * @param {(previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U} callbackFn
- * @param {U} [initialValue]
- * @return {U}
  */
+
 declare global {
   interface Array<T> {
     myReduce<U>(
@@ -53,6 +51,30 @@ Array.prototype.myReduce = function<T, U>(
   }
 
   return accumulator;
+};
+
+Array.prototype.myFilter = function<T>(
+  callback: (value: T, index: number, array: T[]) => boolean,
+  thisArg?: any
+): T[] {
+  if (typeof callback !== 'function') {
+    throw new TypeError(callback + ' is not a function');
+  }
+
+  const result: T[] = [];
+  const arr = this;
+  const len = arr.length;
+
+  for (let i = 0; i < len; i++) {
+    if (i in arr) { // skip holes in sparse arrays
+      const value = arr[i];
+      if (callback.call(thisArg, value, i, arr)) {
+        result.push(value);
+      }
+    }
+  }
+
+  return result;
 };
 
 // Export an empty object to make this a module
