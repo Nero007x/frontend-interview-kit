@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import DebounceDemo from './components/DebounceDemo'
 import ArrayReduceDemo from './components/ArrayReduceDemo'
 import ArrayFilterDemo from './components/ArrayFilterDemo'
+import JsonStringifyDemo from './components/JsonStringifyDemo'
 
 function App() {
   return (
@@ -52,6 +53,10 @@ function App() {
                   <div className="mt-8">
                     <ArrayFilterDemo />
                   </div>
+                </section>
+                <section>
+                  <h2 className="text-2xl font-semibold mb-4">JSON Methods</h2>
+                  <JsonStringifyDemo />
                 </section>
               </div>
             </div>
